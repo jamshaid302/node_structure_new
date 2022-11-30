@@ -1,6 +1,8 @@
 const config = {
     port: 3000,
     host: "0.0.0.0",
+    secret:'',
+    SENDGRID_API_KEY:'',
     allowedDomains: ["http://localhost:4200", "http://localhost:3000", "http://localhost"],
     tokenLife: 9999999,
     refreshTokenLife: 9999999,
