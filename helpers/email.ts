@@ -6,7 +6,7 @@ export default class Email {
         sgMail.setApiKey(config.SENDGRID_API_KEY);
         const msg = {
             to: email,
-            from: 'devdlogixs@gmail.com',
+            from: 'jamshaidniazi000@gmail.com',
             subject: 'Password',
             text: 'Your Password is: ' + password,
             html: '<strong>Your Password is: </strong>' + password,
