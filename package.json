@@ -1,0 +1,67 @@
+{
+  "name": "new_node_structure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node index.ts",
+    "test": "jest --config",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "dev": "ts-node-dev --respawn --transpile-only index.ts",
+    "testprod": "nodemon ./build/index.js -w",
+    "test-dev": "ts-node --project ./tsconfig.json index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^9.1.4",
+    "@sendgrid/mail": "^7.7.0",
+    "@types/node": "^18.8.3",
+    "@types/validator": "^13.7.7",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "heroku": "^7.66.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.5",
+    "multer": "^1.4.5-lts.1",
+    "salted-sha256": "^1.0.2",
+    "supertest": "^6.3.0",
+    "tslib": "^2.4.0",
+    "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^9.1.4",
+    "@types/express": "^4.17.1",
+    "@types/jest": "^29.1.2",
+    "@types/jsonwebtoken": "^8.3.4",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.2.0",
+    "nodemon": "^2.0.20",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^8.4.1",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tslint": "^5.20.0",
+    "typescript": "^4.7.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
