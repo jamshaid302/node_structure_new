@@ -30,10 +30,6 @@ export class ImageController extends BaseController {
       } catch (error) {
         console.log(error);
       }
-      //   [result, pagination] = await Promise.all([
-      //     UserImage.aggregate(req.aggregations),
-      //     UserImage.aggregate(req.dbPagination),
-      //   ]);
       return this.json(res, 201, {
         error: false,
         success: true,
