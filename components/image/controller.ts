@@ -22,14 +22,10 @@ export class ImageController extends BaseController {
       const record: any = req.aggregations;
       const page: any = req.dbPagination;
       // if any of the function is failed in promise then we need to use the try catch to handle the rejected request 
-      try {
-        [result, pagination] = await Promise.allSettled([
+      [result, pagination] = await Promise.allSettled([
           UserImage.aggregate(record),
           UserImage.aggregate(page),
-        ]);
-      } catch (error) {
-        console.log(error);
-      }
+      ])
       return this.json(res, 201, {
         error: false,
         success: true,

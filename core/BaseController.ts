@@ -107,7 +107,7 @@ export class BaseController extends Utility {
   protected getAggregation = (
     req: Request,
     filter_options: Filter_Options,
-    defaultFilter: object = {}
+    defaultFilter: object = new Map()
   ) => {
     let { search, defaultSort, filters } = filter_options;
     const data = defaultFilter;
